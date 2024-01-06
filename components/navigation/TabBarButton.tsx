@@ -21,7 +21,7 @@ export default function TabBarButton({
   active,
   onPress,
 }: TabBarButtonProps) {
-  const activeValue = useSharedValue(0);
+  const activeValue = useSharedValue(active?1:0);
 
   useEffect(() => {
     activeValue.value = active ? withTiming(1) : withTiming(0);
